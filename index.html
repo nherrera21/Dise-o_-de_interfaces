@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Travel Agency</title>
+
+
+<!-- Fuentes de Google -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+
+  <!-- CSS -->
+
+  	<link rel="stylesheet" href="css/styles.css" />
+</head>
+
+
+<body>
+
+  <!-- Barra de menu -->
+<header class="encabezado">
+  <div class="logo">
+    <img src="logo.png" alt="Logo de la agencia de viajes">
+  </div>
+  <nav class="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Conócenos</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Noticias</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+    <!-- Imagen hero con barra de búsqueda -->
+  <header class="hero">
+    <img src="logo.png" alt="Logo de la agencia de viajes">
+    <form class="busqueda">
+      <input type="text" placeholder="Buscar destino">
+      <select name="pais">
+        <option value="es">España</option>
+        <option value="fr">Francia</option>
+        <option value="us">Estados Unidos</option>
+        <option value="th">Tailandia</option>
+      </select>
+      <label for="fecha">Fechas:</label>
+      <input type="date" name="fecha" id="fecha">
+      <button type="submit">Buscar</button>
+      <div class="hero-image"></div>
+    </form>
+  </header>
+
+
+    <!-- Banner -->
+  <section class="banner">
+    <h2>Descubre nuestros destinos más populares</h2>
+    <div class="destinos">
+      <img src="bali.jpg" alt="Bali">
+      <img src="paris.jpg" alt="París">
+      <img src="newyork.jpg" alt="Nueva York">
+      <img src="phi-phi.jpg" alt="Phi Phi Islands">
+    </div>
+  </section>
+
+
+  <!-- Pestañas -->
+<div class="tabs">
+  <button class="tablinks" onclick="openTab(event, 'tab1')">Pestaña 1</button>
+  <button class="tablinks" onclick="openTab(event, 'tab2')">Pestaña 2</button>
+
+  <div id="tab1" class="tabcontent">
+    <h3>Contenido de la pestaña 1</h3>
+    <p> ¿ADÓNDE PUEDO VOLAR? Comprueba el mapa </p>
+  </div>
+
+  <div id="tab2" class="tabcontent">
+    <h3>Contenido de la pestaña 2</h3>
+    <p>REGLAS PARA VIAJAR.Qué deberías saber</p>
+  </div>
+
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="hero-newsletter">
+      <h2>Suscríbete a nuestra newsletter</h2>
+    </div>
+    <form class="formulario-newsletter">
+      <input type="email" placeholder="Correo electrónico">
+      <button type="submit">Suscribirse</button>
+    </form>
+  </section>
+
+
+   <!-- Footer -->
+  <footer>
+    <ul class="redes-sociales">
+      <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
+      <li><a href="#"><img src="tiktok.png" alt="TikTok"></a></li>
+      <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
+    </ul>
+    <p class="info">Travel Agency &copy; 2023. Todos los derechos reservados.</p>
+  </footer>

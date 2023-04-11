@@ -1,0 +1,269 @@
+/* Estilos generales */
+
+body {
+  margin: 0;
+ font-family: 'Oswald', sans-serif;
+background-color: #f2f2f2;
+color: #333;
+
+
+}
+
+/* Encabezado */
+
+/* Se establece un contenedor flexible con los 
+elementos alineados en el eje principal entre ellos,
+centrados verticalmente, con un relleno interno de 1rem, 
+un fondo blanco y una sombra de caja */
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #aquamarine;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Se establece una imagen de logo con una altura máxima de 50px */
+.logo img {
+  height: 50px;
+}
+
+
+/* Fonts */
+
+/* Cargar la fuente Oswald */
+@font-face {
+  font-family: 'Oswald';
+  src: url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+}
+
+@font-face {
+  font-family: "Sue Ellen Francisco";
+  src: url("/sue-ellen-francisco.ttf") format('truetype');
+}
+
+
+/* barra de navegación. Utilizo flexbox para poder posicionar
+los elementos en la barra de navegacion y ajustar el contenido
+al extremo derecho de la web. */
+
+.menu {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+/* Este código establece que la lista dentro de la barra de 
+navegación debe ser visualizada sin viñetas, 
+y sin margen ni relleno. */
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*Los elementos de la lista dentro de 
+la barra de navegación se muestran uno al lado del otro. 
+Se adpta un margen de 10px entre cada elemento. */
+
+.menu li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/*Los elementos de la lista dentro de la barra
+de navegación deben ser mostrados como un bloque.
+Añade un espacio superior y inferior y de 20px en los lados
+Se elimina el subrayado de los enlaces, con texto blanco*/
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+/*Cuando el usuario coloca el cursor del mouse sobre un elemento
+de la barra de navegacion, el fondo se oscurece y el texto se vuelve blanco
+para indicar visualmente que se ha seleccionado*/ 
+.menu a:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Se establece una imagen herocon anchura 
+máxima de 200px y un margen inferior de 2rem */
+
+.hero img {
+  max-width: 200px;
+  margin-bottom: 2rem;
+}
+
+
+/* Se establece un contenedor flexible para el formulario de 
+búsqueda con elementos centrados horizontalmente y verticalmente, 
+un fondo blanco, un relleno de 1rem,
+un borde redondeado y una sombra de caja */
+
+.busqueda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+/* Se establece un estilo para los elementos de entrada de 
+texto del formulario de búsqueda, incluyendo un margen a la
+derecha, un relleno interno,
+un borde sin borde y un borde redondeado */
+
+.busqueda input[type="text"],
+.busqueda select,
+.busqueda input[type="date"] {
+  margin-right: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.busqueda input[type="submit"] {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+}
+
+/* Banner */
+
+
+/* Estilos del contenedor del banner */
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Estilos del título del banner */
+
+.banner h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Estilos del contenedor de los destinos */
+
+.destinos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+/* Estilos de las imágenes de los destinos */
+
+.destinos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* PESTAÑAS */
+
+/* Oculta todos los contenidos de las pestañas */
+.tabcontent {
+  display: none;
+}
+
+/* Estilo de las pestañas */
+.tablinks {
+  background-color: #fff;
+  border: none;
+  color: #000;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Estilo de la pestaña activa */
+.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Muestra el contenido de la pestaña activa */
+.active + .tabcontent {
+  display: block;
+}
+
+/* Newsletter */
+
+.newsletter {
+  background-color: #007bff;
+  color: #fff;
+  padding: 2rem;
+}
+
+/* Estilos del título del boletín de noticias */
+
+.hero-newsletter h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Estilos del formulario del boletín de noticias */
+
+.formulario-newsletter input[type="email"] {
+  margin-right: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #555;
+  background-color: #fff;
+}
+
+/* Estilos del botón de envío del formulario del boletín de noticias */
+
+.formulario-newsletter input[type="submit"] {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #ffc107;
+  cursor: pointer;
+}
+
+/* Footer */
+
+/* Estilos del contenedor del pie de página */
+
+footer {
+  display: flex;
+  flex-direction: column;
