@@ -20,15 +20,38 @@ un fondo blanco y una sombra de caja */
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #aquamarine;
+  background-color: #009688; /* Color principal */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Se establece una imagen de logo con una altura máxima de 50px */
 .logo img {
-  height: 50px;
+  height: 50px; /* Altura máxima */
+  width: auto; /* Ancho automático */
 }
 
+/* Estilos para el menú de navegación */
+
+.menu {
+  display: flex;
+  gap: 1rem;
+  background-color: #009688;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #fff;
+  color: #009688;
+}
 
 /* Fonts */
 
@@ -102,13 +125,11 @@ para indicar visualmente que se ha seleccionado*/
   justify-content: center;
   align-items: center;
   height: 80vh;
-  background-image: url('hero.jpg');
+  border-bottom: 1px solid #f8b700;
+  background-image: url("/img/HeroImage.jpg");
   background-size: cover;
-  background-position: center;
 }
 
-/* Se establece una imagen herocon anchura 
-máxima de 200px y un margen inferior de 2rem */
 
 .hero img {
   max-width: 200px;
@@ -180,7 +201,7 @@ un borde sin borde y un borde redondeado */
 
 .destinos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
@@ -191,6 +212,21 @@ un borde sin borde y un borde redondeado */
   height: 100%;
   object-fit: cover;
   border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  /* Esta media query se aplica solo cuando el ancho de la pantalla es igual o mayor a 768px */
+
+.destinos {     
+/* Ajusta la propiedad grid-template-columns para que el contenedor tenga cuatro columnas de ancho igual */
+  grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Ajusta el margen para la segunda y cuarta imagen */
+  .destinos img:nth-child(2),
+  .destinos img:nth-child(4) {
+    margin-top: 2rem;
+  }
 }
 
 /* PESTAÑAS */
@@ -208,6 +244,17 @@ un borde sin borde y un borde redondeado */
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Agrega un borde inferior a las pestañas */
+.tablinks::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  transition: background-color 0.2s ease-in-out;
 }
 
 /* Estilo de la pestaña activa */
@@ -216,17 +263,40 @@ un borde sin borde y un borde redondeado */
   color: #fff;
 }
 
+/* Cambia el color del borde inferior de la pestaña activa */
+.active::after {
+  background-color: #ffc107;
+}
+
 /* Muestra el contenido de la pestaña activa */
 .active + .tabcontent {
   display: block;
 }
 
+/* Agrega una animación al cambiar de pestaña */
+.tablinks:not(.active):hover {
+  background-color: #ddd;
+}
+
+/* Agrega un efecto de pulsación al hacer clic en una pestaña */
+.tablinks:active {
+  transform: scale(0.95);
+}
+
 /* Newsletter */
 
 .newsletter {
-  background-color: #007bff;
+  background-image: url('ruta-de-la-imagen.jpg');
+  background-size: cover;
+  background-position: center;
   color: #fff;
   padding: 2rem;
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* Estilos del título del boletín de noticias */
@@ -236,16 +306,23 @@ un borde sin borde y un borde redondeado */
   margin-bottom: 2rem;
 }
 
+.formulario-newsletter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 /* Estilos del formulario del boletín de noticias */
 
 .formulario-newsletter input[type="email"] {
-  margin-right: 1rem;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  color: #555;
-  background-color: #fff;
+margin-right: 1rem;
+margin-bottom: 1rem;
+padding: 0.5rem;
+border: none;
+border-radius: 4px;
+font-size: 1rem;
+color: #555;
+background-color: #f8f8f8;
 }
 
 /* Estilos del botón de envío del formulario del boletín de noticias */
@@ -256,7 +333,7 @@ un borde sin borde y un borde redondeado */
   border-radius: 4px;
   font-size: 1rem;
   color: #fff;
-  background-color: #ffc107;
+  background-color: orange;
   cursor: pointer;
 }
 
@@ -266,4 +343,34 @@ un borde sin borde y un borde redondeado */
 
 footer {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.redes-sociales a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.redes-sociales i {
+  font-size: 2rem;
+}
+
+.redes-sociales i:hover {
+  color: #ff9000;
+}
+
+.creditos {
+  font-size: 0.8rem;
+}
